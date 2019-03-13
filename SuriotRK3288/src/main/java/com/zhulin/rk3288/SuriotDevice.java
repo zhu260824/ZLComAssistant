@@ -66,7 +66,7 @@ public class SuriotDevice {
 
 
     public static void onResume() {
-        ComAssistant.getInstance().SetDelayTime(PORT_NAME, 5000);
+        ComAssistant.getInstance().SetDelayTime(PORT_NAME, 500);
         ComAssistant.getInstance().sendLoopData(PORT_NAME, "RES?", false);
         ComAssistant.getInstance().startSendData(PORT_NAME);
     }
