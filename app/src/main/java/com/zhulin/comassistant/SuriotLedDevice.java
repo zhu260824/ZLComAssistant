@@ -1,6 +1,9 @@
-package com.zhulin.rk3288;
+package com.zhulin.comassistant;
 
-public class SuriotDevice {
+import com.zhulin.rk3288.ComAssistant;
+import com.zhulin.rk3288.ComBean;
+
+public class SuriotLedDevice {
     private static String PORT_NAME = "/dev/ttyS4";
     private static int BAUD_RATE = 115200;
 
@@ -77,5 +80,12 @@ public class SuriotDevice {
         ComAssistant.getInstance().closeUart(PORT_NAME);
     }
 
+    public interface DeviceListener {
 
+        void onLightChange(int value);
+
+        void onBodyChange(boolean hasBody);
+
+        void onDataReceived(ComBean ComRecData);
+    }
 }

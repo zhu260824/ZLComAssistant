@@ -8,8 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.zhulin.rk3288.ComBean;
-import com.zhulin.rk3288.DeviceListener;
-import com.zhulin.rk3288.SuriotDevice;
 
 
 public class MainActivity2 extends AppCompatActivity {
@@ -33,23 +31,23 @@ public class MainActivity2 extends AppCompatActivity {
         btnSW = findViewById(R.id.btn_swt);
         btnG.setOnClickListener(v -> {
             String value = etG.getText().toString();
-            SuriotDevice.sendMsg("WGR=," + value + ",", false);
+            SuriotLedDevice.sendMsg("WGR=," + value + ",", false);
         });
         btnR.setOnClickListener(v -> {
             String value = etR.getText().toString();
-            SuriotDevice.sendMsg( "WGR=,," + value, false);
+            SuriotLedDevice.sendMsg( "WGR=,," + value, false);
         });
         btnW.setOnClickListener(v -> {
             String value = etW.getText().toString();
-            SuriotDevice.sendMsg("WGR=" + value + ",,", false);
+            SuriotLedDevice.sendMsg("WGR=" + value + ",,", false);
         });
         btnRE.setOnClickListener(v -> {
-            SuriotDevice.sendMsg( "RES?", false);
+            SuriotLedDevice.sendMsg( "RES?", false);
         });
         btnSW.setOnClickListener(v -> {
-            SuriotDevice.sendMsg( "SWT?", false);
+            SuriotLedDevice.sendMsg( "SWT?", false);
         });
-        SuriotDevice.init();
+        SuriotLedDevice.init();
     }
 
     private void showMsg(String msg, boolean isRES) {
@@ -65,8 +63,8 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SuriotDevice.onResume();
-        SuriotDevice.addDeviceListener(new DeviceListener() {
+        SuriotLedDevice.onResume();
+        SuriotLedDevice.addDeviceListener(new SuriotLedDevice.DeviceListener() {
             @Override
             public void onLightChange(int value) {
                 showMsg(value+"",true);
@@ -87,6 +85,6 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        SuriotDevice.onPause();
+        SuriotLedDevice.onPause();
     }
 }
