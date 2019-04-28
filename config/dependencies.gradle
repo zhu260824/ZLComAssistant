@@ -1,0 +1,88 @@
+ext {
+    //Android
+    minSdkVersion = 21
+    targetSdkVersion = 21
+    compileSdkVersion = 27
+    javaVersion = JavaVersion.VERSION_1_8
+
+    //Libraries
+    supportLibraryVersion = '27+'
+    constraintLayoutVersion = '1.1.3'
+    multidexVersion = "1.0.2"
+    daggerVersion = '2.11'
+    guavaVersion = '25.1-android'
+    butterKnifeVersion = '8.8.1'
+    rxJavaVersion = '2.1.4'
+    rxAndroidVersion = '2.0.1'
+    okHttpVersion = '3.9.0'
+    okioVersion = '1.13.0'
+    retrofitVersion = '2.3.0'
+    glideVersion = '4.7.1'
+    gsonVersion = '2.8.5'
+    fastjsonVersion = '1.1.68.android'
+    eventbusVersion = '3.0.0'
+    streamVersion = '1.2.1'
+    umengversion = 'latest.integration'
+
+    //Testing
+    jUnitVersion = '4.12'
+
+    //Testing
+    androidtestrunner = '1.0.2'
+    androidtestespressocore = '3.0.2'
+
+    //Development
+    leakCanaryVersion = '1.5.4'
+    sentryAndroidVersion = '1.7.10'
+    timberVersion = '4.5.1'
+
+    Dependencies = [
+            appcompat          : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            constraintlayout   : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+            recyclerview       : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            supportv4          : "com.android.support:support-v4:${supportLibraryVersion}",
+            supportfragment    : "com.android.support:support-fragment:${supportLibraryVersion}",
+            supportdesign      : "com.android.support:design:${supportLibraryVersion}",
+            cardview           : "com.android.support:cardview-v7:${supportLibraryVersion}",
+            supportannotations : "com.android.support:support-annotations:${supportLibraryVersion}",
+            multidex           : "com.android.support:multidex:${multidexVersion}",
+            butterknife        : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            butterknifecompiler: "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            dagger             : "com.google.dagger:dagger:${daggerVersion}",
+            guava              : "com.google.guava:guava:${guavaVersion}",
+            daggercompiler     : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            okhttp             : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            logginginterceptor : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            okhttpurlconnection: "com.squareup.okhttp3:okhttp-urlconnection:${okHttpVersion}",
+            okio               : "com.squareup.okio:okio:${okioVersion}",
+            retrofit           : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            adapterrxjava2     : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            convertergson      : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            rxandroid          : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxjava             : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            gson               : "com.google.code.gson:gson:${gsonVersion}",
+            glide              : "com.github.bumptech.glide:glide:${glideVersion}",
+            glideCompiler      : "com.github.bumptech.glide:compiler:${glideVersion}",
+            glideHttp          : "com.github.bumptech.glide:okhttp3-integration:${glideVersion}",
+            fastjson           : "com.alibaba:fastjson:${fastjsonVersion}",
+            eventbus           : "org.greenrobot:eventbus:${eventbusVersion}",
+            stream           : "com.annimon:stream:${streamVersion}",
+            umengcommon        : "com.umeng.sdk:common:${umengversion}",
+            umenganalytics     : "com.umeng.sdk:analytics:${umengversion}",
+    ]
+
+    TestDependencies = [
+            junit: "junit:junit:${jUnitVersion}",
+    ]
+
+    AndroidTestDependencies = [
+            runner      : "com.android.support.test:runner:${androidtestrunner}",
+            espressocore: "com.android.support.test.espresso:espresso-core:${androidtestespressocore}",
+    ]
+
+    DevelopmentDependencies = [
+            leakCanary   : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            sentryandroid: "io.sentry:sentry-android:${sentryAndroidVersion}",
+            timber       : "com.jakewharton.timber:timber:${timberVersion}",
+    ]
+}

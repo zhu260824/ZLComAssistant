@@ -1,19 +1,43 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: DEPENDENCIES_PATH
 
 buildscript {
-    
     repositories {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.4.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
+
+static def gitVersionCode() {
+    def cmd = 'git rev-list HEAD --first-parent --count'
+    cmd.execute().text.trim().toInteger()
+}
+
+static def gitVersionTag() {
+    def cmd = 'git describe --tags'
+    def version = cmd.execute().text.trim()
+    def pattern = "-(\\d+)-g"
+    def matcher = version =~ pattern
+    if (matcher) {
+        version = version.substring(0, matcher.start()) + "." + matcher[0][1]
+    } else {
+        version = version + '.0'
+    }
+    return version
+}
+
+ext {
+    gitVersionCode = gitVersionCode()
+    gitCurrentTag = gitVersionTag()
+}
+
 
 allprojects {
     repositories {
