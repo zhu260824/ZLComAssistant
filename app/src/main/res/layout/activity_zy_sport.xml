@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receive"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black" />
+
+    <ScrollView
+        android:id="@+id/scroll_receive"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_receive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black" />
+
+    <ScrollView
+        android:id="@+id/scroll_send"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_01"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:text="通知发放手环"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_02"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:text="通知可以归还手环"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_03"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:text="通知不能归还手环"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_04"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:text="查询手环数量"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_05"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:text="触发进馆流程"
+            android:visibility="invisible"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_06"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:text="通知不能归还手环"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+</LinearLayout>

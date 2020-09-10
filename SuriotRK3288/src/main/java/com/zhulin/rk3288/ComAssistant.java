@@ -71,6 +71,16 @@ public class ComAssistant {
     }
 
     /**
+     * 发送msg
+     */
+    public void sendMsg(String sPort, byte[] msg) {
+        SerialHelper comPort = getComPort(sPort);
+        if (comPort != null && comPort.isOpen()) {
+            comPort.send(msg);
+        }
+    }
+
+    /**
      * 设置自动发送延时
      */
     public void SetDelayTime(String sPort, int time) {

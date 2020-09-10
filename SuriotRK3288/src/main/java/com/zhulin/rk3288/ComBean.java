@@ -1,6 +1,7 @@
 package com.zhulin.rk3288;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 
 /**
  * @author 串口数据
@@ -18,5 +19,14 @@ public class ComBean {
         }
         SimpleDateFormat sDateFormat = new SimpleDateFormat("hh:mm:ss");
         sRecTime = sDateFormat.format(new java.util.Date());
+    }
+
+    @Override
+    public String toString() {
+        return "ComBean{" +
+                "bRec=" + Arrays.toString(bRec) +
+                ", sRecTime='" + sRecTime + '\'' +
+                ", sComPort='" + sComPort + '\'' +
+                '}';
     }
 }

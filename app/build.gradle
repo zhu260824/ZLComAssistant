@@ -10,6 +10,9 @@ android {
         versionCode rootProject.gitVersionCode
         versionName rootProject.gitCurrentTag
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a' , 'armeabi' , 'x86'
+        }
     }
 
     compileOptions {
